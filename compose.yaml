@@ -1,0 +1,7 @@
+services:
+  img:
+    image: my_new_image
+    build: .
+    container_name: my_new_container
+    ports:
+      - 5050:8080

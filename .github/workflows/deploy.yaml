@@ -34,8 +34,8 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY_1 }}
           script: |
             docker pull ${{ secrets.DOCKER_USERNAME }}/node_app_ci_test:latest
-            docker stop node_app_ci_test || true
-            docker rm node_app_ci_test || true
+            docker stop node_app_ci_testContainer || true
+            docker rm node_app_ci_testContainer|| true
             docker run -d -p 8080:8080 --name node_app_ci_testContainer ${{ secrets.DOCKER_USERNAME }}/node_app_ci_test:latest
 
       # Deploy to EC2-2
@@ -47,6 +47,6 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY_2 }}
           script: |
             docker pull ${{ secrets.DOCKER_USERNAME }}/node_app_ci_test:latest
-            docker stop node_app_ci_test || true
-            docker rm node_app_ci_test || true
+            docker stop node_app_ci_testContainer || true
+            docker rm node_app_ci_testContainer || true
             docker run -d -p 8080:8080 --name node_app_ci_testContainer ${{ secrets.DOCKER_USERNAME }}/node_app_ci_test:latest

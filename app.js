@@ -3,7 +3,7 @@ const app = express();
 const port = 8080;
 
 app.get('/test',(req,res)=>{
-    res.status(200).json({success:true,message:'docker node testing okay..SOMETHING! NEW Code push....'})
+    res.status(200).json({success:true,message:'docker node testing okay..SOMETHING! NEW Code....'})
 })
 
 app.listen(port,()=>{

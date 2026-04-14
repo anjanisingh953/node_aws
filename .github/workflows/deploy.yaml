@@ -3,7 +3,7 @@ name: Deploy with Nginx Load Balancer
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
